@@ -1,38 +1,38 @@
 # Apache Webserver
-dnf install httpd
+- dnf install httpd
 #Starting Apache services
-systemctl start httpd
+- systemctl start httpd
 
 #Epel Release
-dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
+- dnf install https://dl.fedoraproject.org/pub/epel/epel-release-latest-8.noarch.rpm -y
 
 #Remi Repo for PHP
-dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
+- dnf install https://rpms.remirepo.net/enterprise/remi-release-8.rpm -y
 
 #Install vim & wget
-dnf install vim wget -y
+- dnf install vim wget -y
 
 #Wordpress.org Tar file
-wget https://wordpress.org/latest.tar.gz
+- wget https://wordpress.org/latest.tar.gz
 
 #php module for version 7.4
-dnf module install php:remi-7.4
+- dnf module install php:remi-7.4
 
 #install php-mysqlnd
-dnf install php-mysqlnd
+- dnf install php-mysqlnd
 
 #Unzip the wordpress Tar file 
-tar xf latest.tar.gz -C /var/www/html
+- tar xf latest.tar.gz -C /var/www/html
 
 #Install mysql 
-dnf install mysql -y
+- dnf install mysql -y
 
 
 #testing mysql from AWS instance
-mysql -h database_endpoint_url -u user_name -p 
+- mysql -h database_endpoint_url -u user_name -p 
 
 #mysql very basic command for creating Database
-create database db_name;
-show database;
-exit;
+- create database db_name;
+- show database;
+- exit;
 
